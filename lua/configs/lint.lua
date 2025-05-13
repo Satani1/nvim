@@ -1,6 +1,12 @@
 local lint = require("lint")
 
-lint.linters_by_ft = {}
+lint.linters_by_ft = {
+    go = { "golangcilint" },
+    dockerfile = { "hadolint" },
+    lua = { "selene" },
+    markdown = { "markdownlint-cli2" },
+    yaml = { "yamllint" },
+}
 
 lint.linters.luacheck.args = {
     unpack(lint.linters.luacheck.args),
